@@ -1,0 +1,19 @@
+.home{
+    background: url("../../Images/Bg.png") no-repeat 20% 100% ;
+    /* overflow: hidden; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+}
+@media (max-width: 580px){
+  .home{
+    min-height: 260vh !important;
+  }
+}
+.vehicles{
+    position: relative;
+    top: 200px;
+    /* transform: translate(0%, 50%); */
+}

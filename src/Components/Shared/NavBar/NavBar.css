@@ -1,0 +1,14 @@
+.link-btn{
+    border-radius: 8px;
+    padding: 8px 14px;
+    color: blueviolet;
+    cursor: pointer;
+    z-index: 99999;
+}
+.special-text{
+    color: blueviolet;
+}
+.link-btn:hover{
+    background-color: #FF6E40;
+    color: white !important;
+}
