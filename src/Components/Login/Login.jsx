@@ -129,6 +129,9 @@ const Login = () => {
                 // ..
             });
         }
+        else{
+            setError("The account is invalid for the mismatching password or other queries");
+        }
         evt.preventDefault();
 
     }
@@ -146,7 +149,7 @@ const Login = () => {
                 : <form onSubmit={handleCreateAccount} action="" className="border border-dark card p-4 mx-auto w-50">
                      <NewAccountForm setLoggedIn={setLoggedIn}/>
                     {
-                        error && <p className="text-center text-warning">{error}</p>
+                        error && <p className="text-center text-success">{error}</p>
                     }
                 </form>
             }
