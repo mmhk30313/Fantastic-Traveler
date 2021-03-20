@@ -1,6 +1,8 @@
 # Project Live Link: 
 
-[https://fantastic-traveler.netlify.app/](https://fantastic-traveler.netlify.app/)
+### Link-1: [https://fantastic-traveler.netlify.app/](https://fantastic-traveler.netlify.app/)
+
+### Link-2: [https://fantastic-traveler.firebaseapp.com/](https://fantastic-traveler.firebaseapp.com/)
 
 
 ## Fantastic Traveler
