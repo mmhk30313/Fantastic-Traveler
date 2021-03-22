@@ -10,6 +10,7 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../App';
+import NavBar from '../Shared/NavBar/NavBar';
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
@@ -136,33 +137,35 @@ const Login = () => {
 
     }
     return (
-        <div className="container user-form">
-            
-            {
-                loggedIn 
-                ? <form onSubmit={handleEmailSignIn} action="" className="border border-dark card p-4 mx-auto w-50">
-                    <LoginForm setLoggedIn={setLoggedIn}/>
-                    {
-                        error && <p className="text-center text-warning">{error}</p>
-                    }
-                </form>
-                : <form onSubmit={handleCreateAccount} action="" className="border border-dark card p-4 mx-auto w-50">
-                     <NewAccountForm setLoggedIn={setLoggedIn}/>
-                    {
-                        error && <p className="text-center text-success">{error}</p>
-                    }
-                </form>
-            }
+        <div className='bg-light perfect-height'>
+            <NavBar/>
+            <div className="container user-form">
+                {
+                    loggedIn 
+                    ? <form onSubmit={handleEmailSignIn} action="" className="border border-dark card p-4 mx-auto w-50">
+                        <LoginForm setLoggedIn={setLoggedIn}/>
+                        {
+                            error && <p className="text-center text-warning">{error}</p>
+                        }
+                    </form>
+                    : <form onSubmit={handleCreateAccount} action="" className="border border-dark card p-4 mx-auto w-50">
+                        <NewAccountForm setLoggedIn={setLoggedIn}/>
+                        {
+                            error && <p className="text-center text-success">{error}</p>
+                        }
+                    </form>
+                }
 
-            <div className="container sign-in-or">
-                <div className="or">
-                    <p></p>
-                    <em> Or </em>
-                    <p></p>
+                <div className="container sign-in-or">
+                    <div className="or">
+                        <p></p>
+                        <em> Or </em>
+                        <p></p>
+                    </div>
+                    <button onClick={() => handleFBLogin()} className='btn btn-outline-info sign-in-btn'><img className='facebook-img' src={facebook} alt=""/>   Continue with Facebook</button><br/>
+                    
+                    <button onClick={ () => handleGoogleSignIn()} className='btn btn-outline-warning sign-in-btn'><img className='google-img' src={google} alt=""/> Continue with Google</button>
                 </div>
-                <button onClick={() => handleFBLogin()} className='btn btn-outline-info sign-in-btn'><img className='facebook-img' src={facebook} alt=""/>   Continue with Facebook</button><br/>
-                
-                <button onClick={ () => handleGoogleSignIn()} className='btn btn-outline-warning sign-in-btn'><img className='google-img' src={google} alt=""/> Continue with Google</button>
             </div>
         </div>
     );

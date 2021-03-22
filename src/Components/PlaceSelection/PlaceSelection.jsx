@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
 // import map from '../../Images/Map.png';
 import Maps from '../Maps/Maps';
+import NavBar from '../Shared/NavBar/NavBar';
 
 import './PlaceSelection.css';
 const PlaceSelection = () => {
@@ -24,6 +25,7 @@ const PlaceSelection = () => {
     // console.log(vehicle);
     return (
         <div className="container all-bottom">
+            <NavBar/>
             <hr/>
             <div className="row w-100 mx-auto justify-content-center">
                 <form onSubmit={handleSubmit} style={{height: "fit-content"}} className="col-md-3 col-sm-10 mr-2 bg-special rounded py-3 px-4">

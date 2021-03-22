@@ -4,6 +4,7 @@ import { UserContext } from '../../App';
 import fakeData from '../../FakeData/fakeData';
 // import map from '../../Images/Map.png';
 import Maps from '../Maps/Maps';
+import NavBar from '../Shared/NavBar/NavBar';
 
 import CarDetails from './CarDetails';
 const TravellerDetails = () => {
@@ -22,13 +23,14 @@ const TravellerDetails = () => {
     // console.log(travellerDetails);
     const {from, to, vehicle, vehicles} = travellerDetails;
     return (
-        <div className="container all-bottom">
+        <div className="container">
+            <NavBar/>
             <hr/>
             <div className="row w-100 mx-auto justify-content-center">
                 <div style={{height: "fit-content"}} className="col-md-3 mr-2 bg-special rounded col-md-3 mr-2 bg-special rounded py-3 px-4">
                     <ul className="card bg-danger text-light">
-                        <li className="p-1"><b>{from}</b></li>
-                        <li className="p-1"><b>{to}</b></li>
+                        <li className="p-1"><small className="font-weight-bold">{from}</small></li>
+                        <li className="p-1"><small className="font-weight-bold">{to}</small></li>
                     </ul>
                     {
                         vehicles && vehicles.map((v, idx) => <CarDetails key={idx} vehicle={vehicle} vehicleDetails={v} />)

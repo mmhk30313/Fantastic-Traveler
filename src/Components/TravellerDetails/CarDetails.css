@@ -1,0 +1,11 @@
+.special-1{
+    display: none;
+}
+@media (max-width: 1000px){
+    .special-1{
+        display: block;
+    }
+    .special-2{
+        display: none !important;
+    }
+}

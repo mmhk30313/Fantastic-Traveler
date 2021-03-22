@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 // import NavBar from './Components/Shared/NavBar/NavBar';
 import Home from './Components/Home/Home';
-import NavBar from './Components/Shared/NavBar/NavBar';
+// import NavBar from './Components/Shared/NavBar/NavBar';
 import Login from './Components/Login/Login';
 import PlaceSelection from './Components/PlaceSelection/PlaceSelection';
 
@@ -31,9 +31,10 @@ function App() {
   return (
     <UserContext.Provider value={[user, setUser,loggedInUser, setLoggedInUser, places, setPlaces, vehicle, setVehicle]}>
       <Router>
-        <NavBar />
+        {/* <NavBar /> */}
         <Switch>
           <Route exact path="/">
+            {/* <NavBar /> */}
             <Home/>
           </Route>
           <Route path="/home">
